@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63AD781E19B56A230031938D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781D19B56A230031938D /* Foundation.framework */; };
+		63AD782019B56A230031938D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781F19B56A230031938D /* CoreGraphics.framework */; };
+		63AD782219B56A230031938D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD782119B56A230031938D /* UIKit.framework */; };
+		63AD782419B56A230031938D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD782319B56A230031938D /* CoreData.framework */; };
+		63AD782A19B56A230031938D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63AD782819B56A230031938D /* InfoPlist.strings */; };
+		63AD782C19B56A230031938D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD782B19B56A230031938D /* main.m */; };
+		63AD783019B56A230031938D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD782F19B56A230031938D /* AppDelegate.m */; };
+		63AD783319B56A230031938D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AD783119B56A230031938D /* Main.storyboard */; };
+		63AD783619B56A230031938D /* MoonRunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63AD783419B56A230031938D /* MoonRunner.xcdatamodeld */; };
+		63AD783919B56A230031938D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD783819B56A230031938D /* MasterViewController.m */; };
+		63AD783C19B56A230031938D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD783B19B56A230031938D /* DetailViewController.m */; };
+		63AD783E19B56A230031938D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AD783D19B56A230031938D /* Images.xcassets */; };
+		63AD784519B56A230031938D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD784419B56A230031938D /* XCTest.framework */; };
+		63AD784619B56A230031938D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781D19B56A230031938D /* Foundation.framework */; };
+		63AD784719B56A230031938D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD782119B56A230031938D /* UIKit.framework */; };
+		63AD784819B56A230031938D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD782319B56A230031938D /* CoreData.framework */; };
+		63AD785019B56A240031938D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63AD784E19B56A240031938D /* InfoPlist.strings */; };
+		63AD785219B56A240031938D /* MoonRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD785119B56A240031938D /* MoonRunnerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63AD784919B56A240031938D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63AD781219B56A230031938D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63AD781919B56A230031938D;
+			remoteInfo = MoonRunner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63AD781A19B56A230031938D /* MoonRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AD781D19B56A230031938D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63AD781F19B56A230031938D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63AD782119B56A230031938D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63AD782319B56A230031938D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		63AD782719B56A230031938D /* MoonRunner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoonRunner-Info.plist"; sourceTree = "<group>"; };
+		63AD782919B56A230031938D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63AD782B19B56A230031938D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63AD782D19B56A230031938D /* MoonRunner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoonRunner-Prefix.pch"; sourceTree = "<group>"; };
+		63AD782E19B56A230031938D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63AD782F19B56A230031938D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63AD783219B56A230031938D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63AD783519B56A230031938D /* MoonRunner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoonRunner.xcdatamodel; sourceTree = "<group>"; };
+		63AD783719B56A230031938D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		63AD783819B56A230031938D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		63AD783A19B56A230031938D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		63AD783B19B56A230031938D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		63AD783D19B56A230031938D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63AD784319B56A230031938D /* MoonRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AD784419B56A230031938D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		63AD784D19B56A240031938D /* MoonRunnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoonRunnerTests-Info.plist"; sourceTree = "<group>"; };
+		63AD784F19B56A240031938D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63AD785119B56A240031938D /* MoonRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoonRunnerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63AD781719B56A230031938D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD782019B56A230031938D /* CoreGraphics.framework in Frameworks */,
+				63AD782419B56A230031938D /* CoreData.framework in Frameworks */,
+				63AD782219B56A230031938D /* UIKit.framework in Frameworks */,
+				63AD781E19B56A230031938D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AD784019B56A230031938D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD784519B56A230031938D /* XCTest.framework in Frameworks */,
+				63AD784819B56A230031938D /* CoreData.framework in Frameworks */,
+				63AD784719B56A230031938D /* UIKit.framework in Frameworks */,
+				63AD784619B56A230031938D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63AD781119B56A230031938D = {
+			isa = PBXGroup;
+			children = (
+				63AD782519B56A230031938D /* MoonRunner */,
+				63AD784B19B56A240031938D /* MoonRunnerTests */,
+				63AD781C19B56A230031938D /* Frameworks */,
+				63AD781B19B56A230031938D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63AD781B19B56A230031938D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63AD781A19B56A230031938D /* MoonRunner.app */,
+				63AD784319B56A230031938D /* MoonRunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63AD781C19B56A230031938D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63AD781D19B56A230031938D /* Foundation.framework */,
+				63AD781F19B56A230031938D /* CoreGraphics.framework */,
+				63AD782119B56A230031938D /* UIKit.framework */,
+				63AD782319B56A230031938D /* CoreData.framework */,
+				63AD784419B56A230031938D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63AD782519B56A230031938D /* MoonRunner */ = {
+			isa = PBXGroup;
+			children = (
+				63AD782E19B56A230031938D /* AppDelegate.h */,
+				63AD782F19B56A230031938D /* AppDelegate.m */,
+				63AD783119B56A230031938D /* Main.storyboard */,
+				63AD783719B56A230031938D /* MasterViewController.h */,
+				63AD783819B56A230031938D /* MasterViewController.m */,
+				63AD783A19B56A230031938D /* DetailViewController.h */,
+				63AD783B19B56A230031938D /* DetailViewController.m */,
+				63AD783D19B56A230031938D /* Images.xcassets */,
+				63AD783419B56A230031938D /* MoonRunner.xcdatamodeld */,
+				63AD782619B56A230031938D /* Supporting Files */,
+			);
+			path = MoonRunner;
+			sourceTree = "<group>";
+		};
+		63AD782619B56A230031938D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63AD782719B56A230031938D /* MoonRunner-Info.plist */,
+				63AD782819B56A230031938D /* InfoPlist.strings */,
+				63AD782B19B56A230031938D /* main.m */,
+				63AD782D19B56A230031938D /* MoonRunner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63AD784B19B56A240031938D /* MoonRunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				63AD785119B56A240031938D /* MoonRunnerTests.m */,
+				63AD784C19B56A240031938D /* Supporting Files */,
+			);
+			path = MoonRunnerTests;
+			sourceTree = "<group>";
+		};
+		63AD784C19B56A240031938D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63AD784D19B56A240031938D /* MoonRunnerTests-Info.plist */,
+				63AD784E19B56A240031938D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63AD781919B56A230031938D /* MoonRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AD785519B56A240031938D /* Build configuration list for PBXNativeTarget "MoonRunner" */;
+			buildPhases = (
+				63AD781619B56A230031938D /* Sources */,
+				63AD781719B56A230031938D /* Frameworks */,
+				63AD781819B56A230031938D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoonRunner;
+			productName = MoonRunner;
+			productReference = 63AD781A19B56A230031938D /* MoonRunner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63AD784219B56A230031938D /* MoonRunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AD785819B56A240031938D /* Build configuration list for PBXNativeTarget "MoonRunnerTests" */;
+			buildPhases = (
+				63AD783F19B56A230031938D /* Sources */,
+				63AD784019B56A230031938D /* Frameworks */,
+				63AD784119B56A230031938D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63AD784A19B56A240031938D /* PBXTargetDependency */,
+			);
+			name = MoonRunnerTests;
+			productName = MoonRunnerTests;
+			productReference = 63AD784319B56A230031938D /* MoonRunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63AD781219B56A230031938D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = sangchan;
+				TargetAttributes = {
+					63AD784219B56A230031938D = {
+						TestTargetID = 63AD781919B56A230031938D;
+					};
+				};
+			};
+			buildConfigurationList = 63AD781519B56A230031938D /* Build configuration list for PBXProject "MoonRunner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63AD781119B56A230031938D;
+			productRefGroup = 63AD781B19B56A230031938D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63AD781919B56A230031938D /* MoonRunner */,
+				63AD784219B56A230031938D /* MoonRunnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63AD781819B56A230031938D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD783E19B56A230031938D /* Images.xcassets in Resources */,
+				63AD782A19B56A230031938D /* InfoPlist.strings in Resources */,
+				63AD783319B56A230031938D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AD784119B56A230031938D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD785019B56A240031938D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63AD781619B56A230031938D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD783C19B56A230031938D /* DetailViewController.m in Sources */,
+				63AD783919B56A230031938D /* MasterViewController.m in Sources */,
+				63AD783019B56A230031938D /* AppDelegate.m in Sources */,
+				63AD783619B56A230031938D /* MoonRunner.xcdatamodeld in Sources */,
+				63AD782C19B56A230031938D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AD783F19B56A230031938D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AD785219B56A240031938D /* MoonRunnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63AD784A19B56A240031938D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63AD781919B56A230031938D /* MoonRunner */;
+			targetProxy = 63AD784919B56A240031938D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63AD782819B56A230031938D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AD782919B56A230031938D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63AD783119B56A230031938D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AD783219B56A230031938D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63AD784E19B56A240031938D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AD784F19B56A240031938D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63AD785319B56A240031938D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63AD785419B56A240031938D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63AD785619B56A240031938D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
+				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63AD785719B56A240031938D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
+				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		63AD785919B56A240031938D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MoonRunner.app/MoonRunner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MoonRunnerTests/MoonRunnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		63AD785A19B56A240031938D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MoonRunner.app/MoonRunner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
+				INFOPLIST_FILE = "MoonRunnerTests/MoonRunnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63AD781519B56A230031938D /* Build configuration list for PBXProject "MoonRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AD785319B56A240031938D /* Debug */,
+				63AD785419B56A240031938D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63AD785519B56A240031938D /* Build configuration list for PBXNativeTarget "MoonRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AD785619B56A240031938D /* Debug */,
+				63AD785719B56A240031938D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63AD785819B56A240031938D /* Build configuration list for PBXNativeTarget "MoonRunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AD785919B56A240031938D /* Debug */,
+				63AD785A19B56A240031938D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63AD783419B56A230031938D /* MoonRunner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63AD783519B56A230031938D /* MoonRunner.xcdatamodel */,
+			);
+			currentVersion = 63AD783519B56A230031938D /* MoonRunner.xcdatamodel */;
+			path = MoonRunner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 63AD781219B56A230031938D /* Project object */;
+}
