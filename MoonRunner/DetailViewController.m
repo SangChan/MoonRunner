@@ -28,6 +28,7 @@
 - (void)configureView
 {
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
+    self.mapView.delegate = self;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
@@ -87,6 +88,7 @@
         aRenderer.lineWidth = 3;
         return aRenderer;
     }
+    
     return nil;
 }
 
@@ -108,7 +110,6 @@
         [self.mapView setRegion:[self mapRegion]];
         NSArray *colorSegmentArray = [MathController colorSegmentsForLocations:self.run.locations.array];
         [self.mapView addOverlays:colorSegmentArray];
-        //[self.mapView addOverlay:[self polyLine]];
     }
     else {
         self.mapView.hidden = YES;

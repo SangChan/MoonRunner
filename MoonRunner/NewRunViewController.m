@@ -60,6 +60,7 @@
     self.paceLabel.hidden = YES;
     self.stopButton.hidden = YES;
     self.mapView.hidden = YES;
+    self.mapView.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -80,7 +81,6 @@
     self.seconds = 0;
     self.distance = 0.0;
     self.locations = [NSMutableArray array];
-    [self eachSecond];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     [self startLoactionUpdates];
     self.mapView.hidden = NO;
@@ -172,14 +172,15 @@
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.timestamp = [NSDate date];
     
-    
+    NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {
         Location *locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
         locationObject.timeStamp = location.timestamp;
         locationObject.latitude = [NSNumber numberWithDouble:location.coordinate.latitude];
         locationObject.longitude = [NSNumber numberWithDouble:location.coordinate.longitude];
+        [locationArray addObject:locationObject];
     }
-    NSMutableArray *locationArray = [NSMutableArray array];
+
     newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
     self.run = newRun;
     
