@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635A4F9D19C6CA03006CDE40 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A4F9C19C6CA03006CDE40 /* Badge.m */; };
+		635A4FA119C6CCBE006CDE40 /* BadgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A4FA019C6CCBE006CDE40 /* BadgeController.m */; };
 		63AD781E19B56A230031938D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781D19B56A230031938D /* Foundation.framework */; };
 		63AD782019B56A230031938D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781F19B56A230031938D /* CoreGraphics.framework */; };
 		63AD782219B56A230031938D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD782119B56A230031938D /* UIKit.framework */; };
@@ -87,6 +89,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		635A4F9B19C6CA03006CDE40 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
+		635A4F9C19C6CA03006CDE40 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
+		635A4F9F19C6CCBE006CDE40 /* BadgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeController.h; sourceTree = "<group>"; };
+		635A4FA019C6CCBE006CDE40 /* BadgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeController.m; sourceTree = "<group>"; };
 		63AD781A19B56A230031938D /* MoonRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AD781D19B56A230031938D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63AD781F19B56A230031938D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,6 +255,10 @@
 				63AD78C119B577CD0031938D /* MathController.m */,
 				63AD78C319B5835F0031938D /* MulticolorPolylineSegment.h */,
 				63AD78C419B5835F0031938D /* MulticolorPolylineSegment.m */,
+				635A4F9B19C6CA03006CDE40 /* Badge.h */,
+				635A4F9C19C6CA03006CDE40 /* Badge.m */,
+				635A4F9F19C6CCBE006CDE40 /* BadgeController.h */,
+				635A4FA019C6CCBE006CDE40 /* BadgeController.m */,
 			);
 			path = MoonRunner;
 			sourceTree = "<group>";
@@ -484,7 +494,9 @@
 				63AD78C219B577CD0031938D /* MathController.m in Sources */,
 				63AD78C519B5835F0031938D /* MulticolorPolylineSegment.m in Sources */,
 				63AD783019B56A230031938D /* AppDelegate.m in Sources */,
+				635A4F9D19C6CA03006CDE40 /* Badge.m in Sources */,
 				63AD785D19B56B6A0031938D /* Run.m in Sources */,
+				635A4FA119C6CCBE006CDE40 /* BadgeController.m in Sources */,
 				63AD783619B56A230031938D /* MoonRunner.xcdatamodeld in Sources */,
 				63AD78BC19B5704D0031938D /* HomeViewController.m in Sources */,
 				63AD782C19B56A230031938D /* main.m in Sources */,
@@ -616,7 +628,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
 				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -630,7 +642,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
 				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -695,6 +707,7 @@
 				63AD785719B56A240031938D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63AD785819B56A240031938D /* Build configuration list for PBXNativeTarget "MoonRunnerTests" */ = {
 			isa = XCConfigurationList;
@@ -703,6 +716,7 @@
 				63AD785A19B56A240031938D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
