@@ -8,8 +8,12 @@
 
 #import "HomeViewController.h"
 #import "NewRunViewController.h"
+#import "BadgeTableViewController.h"
+#import "BadgeController.h"
 
 @interface HomeViewController ()
+
+@property (strong, nonatomic) NSArray *runArray;
 
 @end
 
@@ -47,8 +51,23 @@
     UIViewController *nextController = [segue destinationViewController];
     if ([nextController isKindOfClass:[NewRunViewController class]]) {
         ((NewRunViewController *)nextController).managedObjectContext = self.managedObjectContext;
+    } else if ([nextController isKindOfClass:[BadgeTableViewController class]]) {
+        ((BadgeTableViewController *)nextController).earnStatusArray = [[BadgeController defaultConroller] earnStatusForRuns:self.runArray];
     }
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"timestamp" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    self.runArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+}
 
 @end

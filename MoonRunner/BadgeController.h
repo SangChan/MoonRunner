@@ -11,5 +11,6 @@
 @interface BadgeController : NSObject
 
 + (BadgeController *)defaultConroller;
+- (NSArray *)earnStatusForRuns:(NSArray *)runArray;
 
 @end

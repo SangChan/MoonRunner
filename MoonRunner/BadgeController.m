@@ -8,6 +8,12 @@
 
 #import "BadgeController.h"
 #import "Badge.h"
+#import "BadgeEarnStatus.h"
+#import "Run.h"
+
+float const silverMulitiplier = 1.05;
+float const goldMulitiplier = 1.10;
+
 @interface BadgeController()
 
 @property (strong, nonatomic) NSArray *badges;
@@ -51,6 +57,45 @@
     badge.imageName = [dictionary objectForKey:@"imageName"];
     badge.distance = [[dictionary objectForKey:@"distance"] floatValue];
     return badge;
+}
+
+- (NSArray *)earnStatusForRuns:(NSArray *)runs {
+    NSMutableArray *earnStatuses = [NSMutableArray array];
+    for (Badge *badge in self.badges) {
+        BadgeEarnStatus *earnStatus = [BadgeEarnStatus new];
+        earnStatus.badge = badge;
+        
+        for (Run *run in runs) {
+            if (run.distance.floatValue > badge.distance) {
+                if (!earnStatus.earnRun) {
+                    earnStatus.earnRun = run;
+                }
+                
+                double earnRunSpeed = earnStatus.earnRun.distance.doubleValue / earnStatus.earnRun.duration.doubleValue;
+                double runSpeed = run.distance.doubleValue / run.duration.doubleValue;
+                
+                if (!earnStatus.silverRun && runSpeed > earnRunSpeed * silverMulitiplier) {
+                    earnStatus.silverRun = run;
+                }
+                
+                if (!earnStatus.goldRun && runSpeed > earnRunSpeed * goldMulitiplier) {
+                    earnStatus.goldRun = run;
+                }
+                
+                if (!earnStatus.bestRun) {
+                    earnStatus.bestRun = run;
+                } else {
+                    double bestRunSpeed = earnStatus.bestRun.distance.doubleValue / earnStatus.bestRun.duration.doubleValue;
+                    
+                    if (runSpeed > bestRunSpeed) {
+                        earnStatus.bestRun = run;
+                    }
+                }
+            }
+        }
+        [earnStatuses addObject:earnStatus];
+    }
+    return earnStatuses;
 }
 
 @end

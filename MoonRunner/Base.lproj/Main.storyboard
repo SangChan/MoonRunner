@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
-        <deployment defaultVersion="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -153,13 +152,13 @@ Launch?</string>
         <!--Badges-->
         <scene sceneID="CuH-tw-ojk">
             <objects>
-                <tableViewController id="faU-lx-0tI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="c42-79-kWd">
+                <tableViewController id="faU-lx-0tI" customClass="BadgeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="c42-79-kWd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="80" id="GcW-EL-JoC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BadgeCell" rowHeight="80" id="GcW-EL-JoC" customClass="BadgeCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GcW-EL-JoC" id="Ptz-Ys-cAV">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -188,6 +187,11 @@ Launch?</string>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="badgeImageView" destination="LDk-pt-C8g" id="5zB-lV-ctH"/>
+                                    <outlet property="descLabel" destination="dpc-cl-mPC" id="Iz7-7T-e85"/>
+                                    <outlet property="goldImageView" destination="8Ku-k4-FPV" id="Hzm-OE-84f"/>
+                                    <outlet property="nameLabel" destination="eeO-tM-8xH" id="U1V-Ft-mvl"/>
+                                    <outlet property="silverImageView" destination="Uc6-IX-zSa" id="BhQ-gb-169"/>
                                     <segue destination="SPf-jB-se8" kind="push" id="FiR-FV-e2A"/>
                                 </connections>
                             </tableViewCell>

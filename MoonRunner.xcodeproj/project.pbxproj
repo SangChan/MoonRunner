@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6325D06619C80A3400AD2F4C /* BadgeEarnStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325D06519C80A3400AD2F4C /* BadgeEarnStatus.m */; };
+		6325D06919C8105200AD2F4C /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325D06819C8105200AD2F4C /* BadgeCell.m */; };
+		6325D06C19C819D800AD2F4C /* BadgeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6325D06B19C819D800AD2F4C /* BadgeTableViewController.m */; };
 		635A4F9D19C6CA03006CDE40 /* Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A4F9C19C6CA03006CDE40 /* Badge.m */; };
 		635A4FA119C6CCBE006CDE40 /* BadgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A4FA019C6CCBE006CDE40 /* BadgeController.m */; };
 		63AD781E19B56A230031938D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD781D19B56A230031938D /* Foundation.framework */; };
@@ -89,6 +92,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6325D06419C80A3400AD2F4C /* BadgeEarnStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeEarnStatus.h; sourceTree = "<group>"; };
+		6325D06519C80A3400AD2F4C /* BadgeEarnStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeEarnStatus.m; sourceTree = "<group>"; };
+		6325D06719C8105200AD2F4C /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
+		6325D06819C8105200AD2F4C /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
+		6325D06A19C819D800AD2F4C /* BadgeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeTableViewController.h; sourceTree = "<group>"; };
+		6325D06B19C819D800AD2F4C /* BadgeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeTableViewController.m; sourceTree = "<group>"; };
 		635A4F9B19C6CA03006CDE40 /* Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Badge.h; sourceTree = "<group>"; };
 		635A4F9C19C6CA03006CDE40 /* Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Badge.m; sourceTree = "<group>"; };
 		635A4F9F19C6CCBE006CDE40 /* BadgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeController.h; sourceTree = "<group>"; };
@@ -259,6 +268,12 @@
 				635A4F9C19C6CA03006CDE40 /* Badge.m */,
 				635A4F9F19C6CCBE006CDE40 /* BadgeController.h */,
 				635A4FA019C6CCBE006CDE40 /* BadgeController.m */,
+				6325D06419C80A3400AD2F4C /* BadgeEarnStatus.h */,
+				6325D06519C80A3400AD2F4C /* BadgeEarnStatus.m */,
+				6325D06719C8105200AD2F4C /* BadgeCell.h */,
+				6325D06819C8105200AD2F4C /* BadgeCell.m */,
+				6325D06A19C819D800AD2F4C /* BadgeTableViewController.h */,
+				6325D06B19C819D800AD2F4C /* BadgeTableViewController.m */,
 			);
 			path = MoonRunner;
 			sourceTree = "<group>";
@@ -492,11 +507,14 @@
 				63AD783C19B56A230031938D /* DetailViewController.m in Sources */,
 				63AD786019B56B6B0031938D /* Location.m in Sources */,
 				63AD78C219B577CD0031938D /* MathController.m in Sources */,
+				6325D06919C8105200AD2F4C /* BadgeCell.m in Sources */,
 				63AD78C519B5835F0031938D /* MulticolorPolylineSegment.m in Sources */,
 				63AD783019B56A230031938D /* AppDelegate.m in Sources */,
+				6325D06619C80A3400AD2F4C /* BadgeEarnStatus.m in Sources */,
 				635A4F9D19C6CA03006CDE40 /* Badge.m in Sources */,
 				63AD785D19B56B6A0031938D /* Run.m in Sources */,
 				635A4FA119C6CCBE006CDE40 /* BadgeController.m in Sources */,
+				6325D06C19C819D800AD2F4C /* BadgeTableViewController.m in Sources */,
 				63AD783619B56A230031938D /* MoonRunner.xcdatamodeld in Sources */,
 				63AD78BC19B5704D0031938D /* HomeViewController.m in Sources */,
 				63AD782C19B56A230031938D /* main.m in Sources */,
