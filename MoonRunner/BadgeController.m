@@ -11,9 +11,6 @@
 #import "BadgeEarnStatus.h"
 #import "Run.h"
 
-float const silverMulitiplier = 1.05;
-float const goldMulitiplier = 1.10;
-
 @interface BadgeController()
 
 @property (strong, nonatomic) NSArray *badges;

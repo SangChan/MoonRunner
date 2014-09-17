@@ -207,10 +207,10 @@ Launch?</string>
             </objects>
             <point key="canvasLocation" x="416" y="802"/>
         </scene>
-        <!--View Controller-->
+        <!--Badge Details View Controller-->
         <scene sceneID="Nha-A8-Qte">
             <objects>
-                <viewController id="SPf-jB-se8" sceneMemberID="viewController">
+                <viewController id="SPf-jB-se8" customClass="BadgeDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eVU-mB-I9u"/>
                         <viewControllerLayoutGuide type="bottom" id="40f-3u-kxf"/>
@@ -227,6 +227,9 @@ Launch?</string>
                                 <state key="normal" image="info.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="SPf-jB-se8" eventType="touchUpInside" id="IDv-Kf-Ja9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-y5-0GV">
                                 <rect key="frame" x="0.0" y="275" width="320" height="21"/>
@@ -274,6 +277,17 @@ Launch?</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qDw-cn-3sK"/>
+                    <connections>
+                        <outlet property="badgeImageView" destination="XQT-em-bCC" id="PEL-nm-aMf"/>
+                        <outlet property="bestLabel" destination="knU-s5-cLA" id="ryM-mM-fAI"/>
+                        <outlet property="distanceLabel" destination="9Dk-vu-MWQ" id="VlK-TH-gdI"/>
+                        <outlet property="earnedLabel" destination="mpJ-IK-Tub" id="ZWU-wB-MpF"/>
+                        <outlet property="goldImageView" destination="1Wg-gp-Nwn" id="TI2-8L-sIZ"/>
+                        <outlet property="goldLabel" destination="kcx-8Z-M2g" id="jeJ-P5-LUX"/>
+                        <outlet property="nameLabel" destination="nt8-y5-0GV" id="a7M-2V-07K"/>
+                        <outlet property="silverImageView" destination="w2U-cF-UlP" id="BuV-yo-NBC"/>
+                        <outlet property="silverLabel" destination="Yep-as-v86" id="Wlb-nl-8J3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKk-Gm-tGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
