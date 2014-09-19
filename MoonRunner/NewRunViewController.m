@@ -68,6 +68,8 @@
     self.stopButton.hidden = YES;
     self.mapView.hidden = YES;
     self.mapView.delegate = self;
+    self.nextBadgeLabel.hidden = YES;
+    self.nextBadgeImageView.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -91,6 +93,9 @@
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
     [self startLoactionUpdates];
     self.mapView.hidden = NO;
+    
+    self.nextBadgeLabel.hidden = NO;
+    self.nextBadgeImageView.hidden = NO;
 }
 - (IBAction)stopPressed:(id)sender
 {
@@ -156,6 +161,30 @@
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@", [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
     self.distLabel.text = [NSString stringWithFormat:@"Distance: %@", [MathController stringifyDistance:self.distance]];
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@", [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+    self.nextBadgeLabel.text = [NSString stringWithFormat:@"%@ until %@!",[MathController stringifyDistance:(self.upcomingBadge.distance - self.distance)],self.upcomingBadge.name];
+    [self checkNextBadge];
+}
+
+- (void)checkNextBadge
+{
+    Badge *nextBadge = [[BadgeController defaultConroller] nextBadgeForDistance:self.distance];
+    if (self.upcomingBadge && ![nextBadge.name isEqualToString:self.upcomingBadge.name]) {
+        [self playSuccessSound];
+    }
+    self.upcomingBadge = nextBadge;
+    self.nextBadgeImageView.image = [UIImage imageNamed:nextBadge.imageName];
+}
+
+- (void)playSuccessSound
+{
+    NSString *path = [NSString stringWithFormat:@"%@%@", [[NSBundle mainBundle] resourcePath], @"/success.wav"];
+    SystemSoundID soundID;
+    NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(filePath), &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+    //also vibrate
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 - (void)startLoactionUpdates
