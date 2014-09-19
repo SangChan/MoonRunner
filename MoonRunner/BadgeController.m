@@ -32,11 +32,11 @@
 
 + (NSArray *)badgeArray
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"badges" ofType:@"txt"];
-    NSString *jsonContent = [NSString stringWithContentsOfFile:filePath usedEncoding:nil error:nil];
-    NSData *data = [jsonContent dataUsingEncoding:NSUTF8StringEncoding];
-    NSArray *badgeDicts = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    
+    NSString *filePath           = [[NSBundle mainBundle] pathForResource:@"badges" ofType:@"txt"];
+    NSString *jsonContent        = [NSString stringWithContentsOfFile:filePath usedEncoding:nil error:nil];
+    NSData *data                 = [jsonContent dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *badgeDicts          = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
     NSMutableArray *badgeObjects = [NSMutableArray array];
     
     for (NSDictionary *badgeDict in badgeDicts) {
@@ -56,7 +56,8 @@
     return badge;
 }
 
-- (NSArray *)earnStatusForRuns:(NSArray *)runs {
+- (NSArray *)earnStatusForRuns:(NSArray *)runs
+{
     NSMutableArray *earnStatuses = [NSMutableArray array];
     for (Badge *badge in self.badges) {
         BadgeEarnStatus *earnStatus = [BadgeEarnStatus new];
@@ -93,6 +94,30 @@
         [earnStatuses addObject:earnStatus];
     }
     return earnStatuses;
+}
+
+- (Badge *)bestBadgeForDistance:(float)distance
+{
+    Badge *bestBadge = self.badges.firstObject;
+    for (Badge *badge in self.badges) {
+        if (distance < badge.distance) {
+            break;
+        }
+        bestBadge = badge;
+    }
+    return bestBadge;
+}
+
+- (Badge *)nextBadgeForDistance:(float)distance
+{
+    Badge *nextBadge;
+    for (Badge *badge in self.badges) {
+        nextBadge = badge;
+        if (distance < badge.distance) {
+            break;
+        }
+    }
+    return nextBadge;
 }
 
 @end

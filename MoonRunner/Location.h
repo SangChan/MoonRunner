@@ -13,9 +13,9 @@
 
 @interface Location : NSManagedObject
 
-@property (nonatomic, retain) NSDate * timeStamp;
+@property (nonatomic, retain) NSDate   * timeStamp;
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSNumber * latitude;
-@property (nonatomic, retain) Run *run;
+@property (nonatomic, retain) Run      *run;
 
 @end

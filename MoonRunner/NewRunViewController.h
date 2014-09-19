@@ -13,13 +13,13 @@
 @interface NewRunViewController : UIViewController<UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) Run *run;
-@property (nonatomic, weak) IBOutlet UILabel *promptLabel;
-@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
-@property (nonatomic, weak) IBOutlet UILabel *distLabel;
-@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
-@property (nonatomic, weak) IBOutlet UIButton *startButton;
-@property (nonatomic, weak) IBOutlet UIButton *stopButton;
+@property (nonatomic, strong) Run                    *run;
+@property (nonatomic, weak) IBOutlet UILabel   *promptLabel;
+@property (nonatomic, weak) IBOutlet UILabel   *timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel   *distLabel;
+@property (nonatomic, weak) IBOutlet UILabel   *paceLabel;
+@property (nonatomic, weak) IBOutlet UIButton  *startButton;
+@property (nonatomic, weak) IBOutlet UIButton  *stopButton;
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 
 - (IBAction)startPressed:(id)sender;

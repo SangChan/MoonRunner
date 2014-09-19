@@ -11,10 +11,12 @@
 extern float const silverMulitiplier = 1.05;
 extern float const goldMulitiplier = 1.10;
 
-
+@class Badge;
 @interface BadgeController : NSObject
 
 + (BadgeController *)defaultConroller;
 - (NSArray *)earnStatusForRuns:(NSArray *)runArray;
+- (Badge *)bestBadgeForDistance:(float)distance;
+- (Badge *)nextBadgeForDistance:(float)distance;
 
 @end

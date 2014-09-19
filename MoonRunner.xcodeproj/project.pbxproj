@@ -80,6 +80,7 @@
 		63AD78BF19B570D50031938D /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD78BE19B570D50031938D /* NewRunViewController.m */; };
 		63AD78C219B577CD0031938D /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD78C119B577CD0031938D /* MathController.m */; };
 		63AD78C519B5835F0031938D /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD78C419B5835F0031938D /* MulticolorPolylineSegment.m */; };
+		63E087D819CC204E0024AFE3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E087D719CC204E0024AFE3 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,7 @@
 		63AD78C119B577CD0031938D /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathController.m; sourceTree = "<group>"; };
 		63AD78C319B5835F0031938D /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		63AD78C419B5835F0031938D /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
+		63E087D719CC204E0024AFE3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E087D819CC204E0024AFE3 /* AudioToolbox.framework in Frameworks */,
 				63AD786219B56B840031938D /* MapKit.framework in Frameworks */,
 				63AD782019B56A230031938D /* CoreGraphics.framework in Frameworks */,
 				63AD782419B56A230031938D /* CoreData.framework in Frameworks */,
@@ -233,6 +236,7 @@
 		63AD781C19B56A230031938D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63E087D719CC204E0024AFE3 /* AudioToolbox.framework */,
 				63AD786119B56B840031938D /* MapKit.framework */,
 				63AD781D19B56A230031938D /* Foundation.framework */,
 				63AD781F19B56A230031938D /* CoreGraphics.framework */,

@@ -12,13 +12,20 @@
 #import "MathController.h"
 #import "Location.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+#import "BadgeController.m"
+#import "Badge.h"
+
 @interface NewRunViewController () 
 
 @property int seconds;
 @property float distance;
 @property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) NSMutableArray *locations;
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSMutableArray    *locations;
+@property (nonatomic, strong) NSTimer           *timer;
+@property (nonatomic, strong) Badge             *upcomingBadge;
+@property (nonatomic, weak  ) IBOutlet UILabel     *nextBadgeLabel;
+@property (nonatomic, weak  ) IBOutlet UIImageView *nextBadgeImageView;
 
 @end
 

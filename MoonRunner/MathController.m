@@ -117,19 +117,19 @@ static float const metersInMile = 1609.344;
     double meanSpeed = (slowestSpeed + fastestSpeed)/2;
     
     // RGB for red (slowest)
-    CGFloat r_red = 1.0f;
+    CGFloat r_red   = 1.0f;
     CGFloat r_green = 20/255.0f;
-    CGFloat r_blue = 44/255.0f;
-    
+    CGFloat r_blue  = 44/255.0f;
+
     // RGB for yellow (middle)
-    CGFloat y_red = 1.0f;
+    CGFloat y_red   = 1.0f;
     CGFloat y_green = 215/255.0f;
-    CGFloat y_blue = 0.0f;
-    
+    CGFloat y_blue  = 0.0f;
+
     // RGB for green (fastest)
-    CGFloat g_red = 0.0f;
+    CGFloat g_red   = 0.0f;
     CGFloat g_green = 146/255.0f;
-    CGFloat g_blue = 78/255.0f;
+    CGFloat g_blue  = 78/255.0f;
     
     //return speeds;
     NSMutableArray *colorSegments = [NSMutableArray array];
@@ -150,19 +150,19 @@ static float const metersInMile = 1609.344;
         
         // between red and yellow
         if (speed.doubleValue < meanSpeed) {
-            double ratio = (speed.doubleValue - slowestSpeed) / (meanSpeed - slowestSpeed);
-            CGFloat red = r_red + ratio * (y_red - r_red);
+            double ratio  = (speed.doubleValue - slowestSpeed) / (meanSpeed - slowestSpeed);
+            CGFloat red   = r_red + ratio * (y_red - r_red);
             CGFloat green = r_green + ratio * (y_green - r_green);
-            CGFloat blue = r_blue + ratio * (y_blue - r_blue);
-            color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+            CGFloat blue  = r_blue + ratio * (y_blue - r_blue);
+            color         = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
             
             // between yellow and green
         } else {
-            double ratio = (speed.doubleValue - meanSpeed) / (fastestSpeed - meanSpeed);
-            CGFloat red = y_red + ratio * (g_red - y_red);
+            double ratio  = (speed.doubleValue - meanSpeed) / (fastestSpeed - meanSpeed);
+            CGFloat red   = y_red + ratio * (g_red - y_red);
             CGFloat green = y_green + ratio * (g_green - y_green);
-            CGFloat blue = y_blue + ratio * (g_blue - y_blue);
-            color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
+            CGFloat blue  = y_blue + ratio * (g_blue - y_blue);
+            color         = [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
         }
         
         MulticolorPolylineSegment *segment = [MulticolorPolylineSegment polylineWithCoordinates:coords count:2];
