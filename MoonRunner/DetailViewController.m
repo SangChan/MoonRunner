@@ -11,8 +11,13 @@
 #import "Run.h"
 #import "Location.h"
 #import "MulticolorPolylineSegment.h"
+#import "Badge.h"
+#import "BadgeController.h"
 
-@interface DetailViewController () 
+@interface DetailViewController ()
+
+@property (nonatomic, weak) IBOutlet UIImageView *badgeImageView;
+@property (nonatomic, weak) IBOutlet UIButton *infoButton;
 @end
 
 @implementation DetailViewController
@@ -36,6 +41,8 @@
     self.timeLabel.text = [NSString stringWithFormat:@"Time: %@",[MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES]];
     self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@",[MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue]];
     [self loadMap];
+    Badge *badge = [[BadgeController defaultConroller] bestBadgeForDistance:self.run.distance.floatValue];
+    self.badgeImageView.image = [UIImage imageNamed:badge.imageName];
 }
 
 - (void)viewDidLoad
@@ -116,6 +123,21 @@
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Sorry, this run has no locations saved." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     }
+}
+
+- (IBAction)displayModeToggled:(UISwitch *)sender
+{
+    self.badgeImageView.hidden = !sender.isOn;
+    self.infoButton.hidden = !sender.isOn;
+    self.mapView.hidden = sender.isOn;
+}
+
+- (IBAction)infoButtonPressed
+{
+    Badge *badge = [[BadgeController defaultConroller] bestBadgeForDistance:self.run.distance.floatValue];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:badge.name message:badge.information delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end

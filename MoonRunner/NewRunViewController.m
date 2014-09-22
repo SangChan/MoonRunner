@@ -13,7 +13,7 @@
 #import "Location.h"
 
 #import <AudioToolbox/AudioToolbox.h>
-#import "BadgeController.m"
+#import "BadgeController.h"
 #import "Badge.h"
 
 @interface NewRunViewController () 
@@ -141,8 +141,9 @@
     }
 }
 
-
-
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSLog(@"%@", error.localizedDescription);
+}
 
 #pragma mark - Navigation
 
@@ -189,6 +190,12 @@
 
 - (void)startLoactionUpdates
 {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied ||
+        [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted )
+    {
+        return;
+    }
+
     if (self.locationManager == nil) {
         self.locationManager = [[CLLocationManager alloc]init];
     }
@@ -198,6 +205,10 @@
     self.locationManager.activityType = CLActivityTypeFitness;
     
     self.locationManager.distanceFilter = 10;
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
     [self.locationManager startUpdatingLocation];
 }
 

@@ -81,6 +81,7 @@
 		63AD78C219B577CD0031938D /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD78C119B577CD0031938D /* MathController.m */; };
 		63AD78C519B5835F0031938D /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD78C419B5835F0031938D /* MulticolorPolylineSegment.m */; };
 		63E087D819CC204E0024AFE3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E087D719CC204E0024AFE3 /* AudioToolbox.framework */; };
+		63EC061D19CFD50E002AEA05 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EC061C19CFD50E002AEA05 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		63AD78C319B5835F0031938D /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		63AD78C419B5835F0031938D /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 		63E087D719CC204E0024AFE3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		63EC061C19CFD50E002AEA05 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EC061D19CFD50E002AEA05 /* CoreLocation.framework in Frameworks */,
 				63E087D819CC204E0024AFE3 /* AudioToolbox.framework in Frameworks */,
 				63AD786219B56B840031938D /* MapKit.framework in Frameworks */,
 				63AD782019B56A230031938D /* CoreGraphics.framework in Frameworks */,
@@ -236,6 +239,7 @@
 		63AD781C19B56A230031938D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63EC061C19CFD50E002AEA05 /* CoreLocation.framework */,
 				63E087D719CC204E0024AFE3 /* AudioToolbox.framework */,
 				63AD786119B56B840031938D /* MapKit.framework */,
 				63AD781D19B56A230031938D /* Foundation.framework */,
@@ -254,13 +258,13 @@
 				63AD782E19B56A230031938D /* AppDelegate.h */,
 				63AD782F19B56A230031938D /* AppDelegate.m */,
 				63AD783119B56A230031938D /* Main.storyboard */,
-				63AD783A19B56A230031938D /* DetailViewController.h */,
-				63AD783B19B56A230031938D /* DetailViewController.m */,
 				63AD783D19B56A230031938D /* Images.xcassets */,
 				63AD783419B56A230031938D /* MoonRunner.xcdatamodeld */,
 				63AD782619B56A230031938D /* Supporting Files */,
 				63AD785E19B56B6B0031938D /* Location.h */,
 				63AD785F19B56B6B0031938D /* Location.m */,
+				63AD783A19B56A230031938D /* DetailViewController.h */,
+				63AD783B19B56A230031938D /* DetailViewController.m */,
 				63AD785B19B56B6A0031938D /* Run.h */,
 				63AD785C19B56B6A0031938D /* Run.m */,
 				63AD78BA19B5704D0031938D /* HomeViewController.h */,
@@ -656,7 +660,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
 				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -670,7 +674,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/MoonRunner-Prefix.pch";
 				INFOPLIST_FILE = "MoonRunner/MoonRunner-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

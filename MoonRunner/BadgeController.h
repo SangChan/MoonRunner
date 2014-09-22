@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern float const silverMulitiplier = 1.05;
-extern float const goldMulitiplier = 1.10;
-
 @class Badge;
 @interface BadgeController : NSObject
 
